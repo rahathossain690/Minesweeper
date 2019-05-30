@@ -6,8 +6,8 @@
 var HEIGHT = 9, WIDTH = 9, BOMB = 10;
 var result = document.getElementById("result");
 var cell = [[],[],[],[],[],[],[],[],[],[],[]];
-var dirX = [-1, 0, 1,-1, 0, 1, -1,  0,  1];
-var dirY = [ 1, 1, 1, 0, 0, 0, -1, -1, -1];
+var dirX = [-1, 0, 1,-1, 1, -1,  0,  1];
+var dirY = [ 1, 1, 1, 0, 0, -1, -1, -1];
 var explored = 0;
 var continueGame = true;
 
@@ -19,6 +19,7 @@ function Cell(x, y){
 	this.x = x;
 	this.y = y;
 	this.bomb = false;
+	this.opened = false;
 	this.value = -1;
 	this.controller = document.getElementById("cell" + this.x + "" + this.y);
 	this.setValue = function(){
@@ -29,6 +30,12 @@ function Cell(x, y){
 				temp += cell[this.x + dirX[i]][this.y + dirY[i]].isBomb();
 		}
 		this.value = temp;
+	}
+	this.open = function(){
+		this.opened = true;
+	}
+	this.isOpened = function(){
+		return this.opened;
 	}
 	this.getValue = function(){
 		return this.value;
@@ -91,14 +98,7 @@ function clicked(a){
 		}
 	}
 	else {
-		if(cell[x][y].getValue() == 0){
-			open(x, y);
-		}
-		else {
-			cell[x][y].controller.innerHTML = cell[x][y].getValue();
-			explored += 1;
-			cell[x][y].controller.classList.add("opened");
-		}
+		open(x, y);
 	}
 	if((HEIGHT * WIDTH) - BOMB == explored){
 		result.innerHTML = "YOU WIN!";
@@ -108,9 +108,13 @@ function clicked(a){
 }
 
 function open(x, y){
-	if(cell[x][y].getValue() != 0) return;
+	if(cell[x][y].isOpened()) return;
+	cell[x][y].open();
 	explored += 1;
 	cell[x][y].controller.classList.add("opened");
+	if(cell[x][y].getValue() != 0)
+		cell[x][y].controller.innerHTML = cell[x][y].getValue();
+	if(cell[x][y].getValue() != 0) return;
 	for(var i = 0; i < dirY.length; i++)
 		if(isInside(x + dirX[i], y + dirY[i]))
 			open(x + dirX[i], y + dirY[i]);
