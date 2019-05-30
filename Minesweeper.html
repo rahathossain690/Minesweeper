@@ -1,0 +1,122 @@
+<head>
+	<title>Minesweeper</title>
+</head>
+<body onload="shuffle()">
+	<br>
+	<div align="center" style="height: 50px; width: 100%; background-color: #2d2d2d; color :white;">
+		<h1>Minesweeper</h1>
+	</div>
+	<br>
+	<div align="center">
+		<table border = "1px solid black" class="gameTable">
+		<tr>
+		<td onclick=" clicked(11) " Id="cell11" class = "cell"></td>
+		<td onclick=" clicked(12) " Id="cell12" class = "cell"></td>
+		<td onclick=" clicked(13) " Id="cell13" class = "cell"></td>
+		<td onclick=" clicked(14) " Id="cell14" class = "cell"></td>
+		<td onclick=" clicked(15) " Id="cell15" class = "cell"></td>
+		<td onclick=" clicked(16) " Id="cell16" class = "cell"></td>
+		<td onclick=" clicked(17) " Id="cell17" class = "cell"></td>
+		<td onclick=" clicked(18) " Id="cell18" class = "cell"></td>
+		<td onclick=" clicked(19) " Id="cell19" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(21) " Id="cell21" class = "cell"></td>
+		<td onclick=" clicked(22) " Id="cell22" class = "cell"></td>
+		<td onclick=" clicked(23) " Id="cell23" class = "cell"></td>
+		<td onclick=" clicked(24) " Id="cell24" class = "cell"></td>
+		<td onclick=" clicked(25) " Id="cell25" class = "cell"></td>
+		<td onclick=" clicked(26) " Id="cell26" class = "cell"></td>
+		<td onclick=" clicked(27) " Id="cell27" class = "cell"></td>
+		<td onclick=" clicked(28) " Id="cell28" class = "cell"></td>
+		<td onclick=" clicked(29) " Id="cell29" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(31) " Id="cell31" class = "cell"></td>
+		<td onclick=" clicked(32) " Id="cell32" class = "cell"></td>
+		<td onclick=" clicked(33) " Id="cell33" class = "cell"></td>
+		<td onclick=" clicked(34) " Id="cell34" class = "cell"></td>
+		<td onclick=" clicked(35) " Id="cell35" class = "cell"></td>
+		<td onclick=" clicked(36) " Id="cell36" class = "cell"></td>
+		<td onclick=" clicked(37) " Id="cell37" class = "cell"></td>
+		<td onclick=" clicked(38) " Id="cell38" class = "cell"></td>
+		<td onclick=" clicked(39) " Id="cell39" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(41) " Id="cell41" class = "cell"></td>
+		<td onclick=" clicked(42) " Id="cell42" class = "cell"></td>
+		<td onclick=" clicked(43) " Id="cell43" class = "cell"></td>
+		<td onclick=" clicked(44) " Id="cell44" class = "cell"></td>
+		<td onclick=" clicked(45) " Id="cell45" class = "cell"></td>
+		<td onclick=" clicked(46) " Id="cell46" class = "cell"></td>
+		<td onclick=" clicked(47) " Id="cell47" class = "cell"></td>
+		<td onclick=" clicked(48) " Id="cell48" class = "cell"></td>
+		<td onclick=" clicked(49) " Id="cell49" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(51) " Id="cell51" class = "cell"></td>
+		<td onclick=" clicked(52) " Id="cell52" class = "cell"></td>
+		<td onclick=" clicked(53) " Id="cell53" class = "cell"></td>
+		<td onclick=" clicked(54) " Id="cell54" class = "cell"></td>
+		<td onclick=" clicked(55) " Id="cell55" class = "cell"></td>
+		<td onclick=" clicked(56) " Id="cell56" class = "cell"></td>
+		<td onclick=" clicked(57) " Id="cell57" class = "cell"></td>
+		<td onclick=" clicked(58) " Id="cell58" class = "cell"></td>
+		<td onclick=" clicked(59) " Id="cell59" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(61) " Id="cell61" class = "cell"></td>
+		<td onclick=" clicked(62) " Id="cell62" class = "cell"></td>
+		<td onclick=" clicked(63) " Id="cell63" class = "cell"></td>
+		<td onclick=" clicked(64) " Id="cell64" class = "cell"></td>
+		<td onclick=" clicked(65) " Id="cell65" class = "cell"></td>
+		<td onclick=" clicked(66) " Id="cell66" class = "cell"></td>
+		<td onclick=" clicked(67) " Id="cell67" class = "cell"></td>
+		<td onclick=" clicked(68) " Id="cell68" class = "cell"></td>
+		<td onclick=" clicked(69) " Id="cell69" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(71) " Id="cell71" class = "cell"></td>
+		<td onclick=" clicked(72) " Id="cell72" class = "cell"></td>
+		<td onclick=" clicked(73) " Id="cell73" class = "cell"></td>
+		<td onclick=" clicked(74) " Id="cell74" class = "cell"></td>
+		<td onclick=" clicked(75) " Id="cell75" class = "cell"></td>
+		<td onclick=" clicked(76) " Id="cell76" class = "cell"></td>
+		<td onclick=" clicked(77) " Id="cell77" class = "cell"></td>
+		<td onclick=" clicked(78) " Id="cell78" class = "cell"></td>
+		<td onclick=" clicked(79) " Id="cell79" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(81) " Id="cell81" class = "cell"></td>
+		<td onclick=" clicked(82) " Id="cell82" class = "cell"></td>
+		<td onclick=" clicked(83) " Id="cell83" class = "cell"></td>
+		<td onclick=" clicked(84) " Id="cell84" class = "cell"></td>
+		<td onclick=" clicked(85) " Id="cell85" class = "cell"></td>
+		<td onclick=" clicked(86) " Id="cell86" class = "cell"></td>
+		<td onclick=" clicked(87) " Id="cell87" class = "cell"></td>
+		<td onclick=" clicked(88) " Id="cell88" class = "cell"></td>
+		<td onclick=" clicked(89) " Id="cell89" class = "cell"></td>
+		</tr>
+		<tr>
+		<td onclick=" clicked(91) " Id="cell91" class = "cell"></td>
+		<td onclick=" clicked(92) " Id="cell92" class = "cell"></td>
+		<td onclick=" clicked(93) " Id="cell93" class = "cell"></td>
+		<td onclick=" clicked(94) " Id="cell94" class = "cell"></td>
+		<td onclick=" clicked(95) " Id="cell95" class = "cell"></td>
+		<td onclick=" clicked(96) " Id="cell96" class = "cell"></td>
+		<td onclick=" clicked(97) " Id="cell97" class = "cell"></td>
+		<td onclick=" clicked(98) " Id="cell98" class = "cell"></td>
+		<td onclick=" clicked(99) " Id="cell99" class = "cell"></td>
+		</tr>
+		</table>
+	</div>
+	<br>
+	<div style="width: 100%" align="center">
+		<button class="shuffle" id="shuffle" onclick="shuffle()">Shuffle</button>
+	</div>
+	<br>
+	<div align="center" style="height: 30px; width: 100%; color :white;" Id="result">
+	</div>
+<link rel="stylesheet" type="text/css" href="Minesweeper.css"/>
+<script src="Minesweeper.js"></script>
+</body>

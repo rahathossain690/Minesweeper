@@ -1,0 +1,59 @@
+body{
+	 box-shadow: 0px 0px 10px 1px #2d2d2d inset;
+}
+
+.gameTable{
+	border-collapse: collapse;
+}
+
+.normal{
+	background-color: #2d2d2d;
+}
+
+.win{
+	background-color: darkgreen;
+}
+
+.lose{
+	background-color: darkred;
+}
+
+.cell{
+	text-align: center;
+	font-size: 20px;
+	color : #2d2d2d;
+	height: 50px;
+	width: 50px;
+	border : 2px solid black;
+	cursor: cell;
+	background-color: lightgreen;
+}
+
+.cell:hover{
+	background-color: green;
+}
+
+.opened{
+	background-color: yellow;
+}
+
+.bomb{
+	background-color: red;
+}
+
+.shuffle{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.shuffle:hover{
+	background-color: #2d2d2d;
+}
