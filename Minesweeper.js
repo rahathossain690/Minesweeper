@@ -91,15 +91,29 @@ function clicked(a){
 		}
 	}
 	else {
-		cell[x][y].controller.innerHTML = cell[x][y].getValue();
-		cell[x][y].controller.classList.add("opened");
-		explored += 1;
+		if(cell[x][y].getValue() == 0){
+			open(x, y);
+		}
+		else {
+			cell[x][y].controller.innerHTML = cell[x][y].getValue();
+			explored += 1;
+			cell[x][y].controller.classList.add("opened");
+		}
 	}
 	if((HEIGHT * WIDTH) - BOMB == explored){
 		result.innerHTML = "YOU WIN!";
 		result.classList.add("win");
 		continueGame = false;
 	}
+}
+
+function open(x, y){
+	if(cell[x][y].getValue() != 0) return;
+	explored += 1;
+	cell[x][y].controller.classList.add("opened");
+	for(var i = 0; i < dirY.length; i++)
+		if(isInside(x + dirX[i], y + dirY[i]))
+			open(x + dirX[i], y + dirY[i]);
 }
 
 function randomize(){
